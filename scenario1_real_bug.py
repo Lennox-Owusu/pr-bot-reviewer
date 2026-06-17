@@ -22,3 +22,9 @@ def greet(name):
 def divide(a, b):
     # BUG (intentional): no zero check -> ZeroDivisionError
     return a / b
+
+
+def fetch_config(path):
+    # BUG (intentional): file handle never closed
+    return open(path).read()
+
