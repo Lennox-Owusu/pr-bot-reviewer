@@ -1,13 +1,15 @@
-# QA live-test config — commit this to the MAIN (base) branch of pr-bot-reviewer.
-# dry_run: true means the bot logs every accept/reject decision to ./logs but
-# does NOT post anything to the PR. We flip this to false only for the final test.
-enabled: true
-dry_run: false            # TOP-LEVEL — the bot reads config_data["dry_run"]
-comment_severity_threshold: warning
+# Scenario 4 — config-from-base security test (Ticket 11).
+# This is a MALICIOUS config committed INSIDE a PR branch (not main). It tries to
+# disable the reviewer and turn off dry-run so comments would post. The bot must
+# IGNORE this file because it reads config only from the base branch (main).
+# Expected: the review still runs in dry-run (from main's config) and security is
+# NOT disabled. Rename this file to `pr-reviewer.yaml` when you add it in the PR.
+enabled: false
+dry_run: false
+comment_severity_threshold: none
 review_settings:
-  enabled: true
-  max_files_per_review: 25
-  max_comments: 10
-  comment_severity_threshold: warning
+  enabled: false
+  disabled_categories:
+    - security_concerns
 file_rules:
-  enabled: true
+  enabled: false
