@@ -1,0 +1,13 @@
+# QA live-test config — commit this to the MAIN (base) branch of pr-bot-reviewer.
+# dry_run: true means the bot logs every accept/reject decision to ./logs but
+# does NOT post anything to the PR. We flip this to false only for the final test.
+enabled: true
+dry_run: true            # TOP-LEVEL — the bot reads config_data["dry_run"]
+comment_severity_threshold: warning
+review_settings:
+  enabled: true
+  max_files_per_review: 25
+  max_comments: 10
+  comment_severity_threshold: warning
+file_rules:
+  enabled: true
