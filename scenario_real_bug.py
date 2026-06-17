@@ -8,3 +8,9 @@ Expected on re-review: the divide() comment is NOT posted again."""
 def divide(a, b):
     # divides two numbers, no zero check
     return a / b
+
+
+
+def add(x, y):
+    return x + y
+
