@@ -28,3 +28,9 @@ def fetch_config(path):
     # BUG (intentional): file handle never closed
     return open(path).read()
 
+
+def divide(a, b):
+    # divides two numbers, no zero check
+    return a / b
+
+
