@@ -1,14 +1,11 @@
-# Phase 2 / E1 — config enforcement test. Push this to MAIN (base branch).
-# Adds an ignore pattern: findings on files matching "ignored_*.py" must be dropped.
+# PROD-4 live repro — INVALID config (review_settings missing the required
+# max_files_per_review field). Push to MAIN to reproduce; restore a valid one after.
 enabled: true
 dry_run: false
 comment_severity_threshold: warning
 review_settings:
   enabled: true
-  max_files_per_review: 25
   max_comments: 10
   comment_severity_threshold: warning
 file_rules:
   enabled: true
-  ignored_files:
-    - "ignored_*.py"
