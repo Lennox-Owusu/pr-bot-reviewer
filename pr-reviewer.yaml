@@ -5,6 +5,7 @@ dry_run: false
 comment_severity_threshold: warning
 review_settings:
   enabled: true
+  max_files_per_review: 25
   max_comments: 10
   comment_severity_threshold: warning
 file_rules:
