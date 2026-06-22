@@ -1,5 +1,5 @@
-# Phase 2 / E1 — config enforcement test. Push this to MAIN (base branch).
-# Adds an ignore pattern: findings on files matching "ignored_*.py" must be dropped.
+# E4 test — main-branch config that points at a repo style guide.
+# style_guide_path lives under review_settings. dry_run off so we see the review.
 enabled: true
 dry_run: false
 comment_severity_threshold: warning
@@ -8,7 +8,6 @@ review_settings:
   max_files_per_review: 25
   max_comments: 10
   comment_severity_threshold: warning
+  style_guide_path: "docs/style.md"
 file_rules:
   enabled: true
-  ignored_files:
-    - "ignored_*.py"
