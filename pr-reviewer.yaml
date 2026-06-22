@@ -6,7 +6,7 @@ comment_severity_threshold: warning
 review_settings:
   enabled: true
   max_files_per_review: 25
-  max_comments: 3
+  max_comments: 10
   comment_severity_threshold: warning
   style_guide_path: "docs/style.md"
 file_rules:
