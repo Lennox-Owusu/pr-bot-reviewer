@@ -4,3 +4,5 @@ def withdraw(account, amount):
     return account.balance
 
 # burst 1
+
+# burst 2
