@@ -1,7 +1,8 @@
-# Phase 2 / E1 — config enforcement test. Push this to MAIN (base branch).
-# Adds an ignore pattern: findings on files matching "ignored_*.py" must be dropped.
+# F3 test — config for a NON-MAIN base branch. Distinctive marker: dry_run: true.
+# If the bot reads config from this (the PR's actual base branch), the review runs
+# in dry-run and posts nothing. If it posts comments, it wrongly read main's config.
 enabled: true
-dry_run: false
+dry_run: true
 comment_severity_threshold: warning
 review_settings:
   enabled: true
@@ -10,5 +11,3 @@ review_settings:
   comment_severity_threshold: warning
 file_rules:
   enabled: true
-  ignored_files:
-    - "ignored_*.py"
