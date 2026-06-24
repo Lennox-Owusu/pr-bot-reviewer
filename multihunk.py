@@ -1,5 +1,6 @@
 def load(path):
-    return open(path).read()
+    data = open(path).read()
+    return eval(data)              # BUG: eval() on file contents (code injection)
 
 
 def helper(x):
@@ -7,4 +8,5 @@ def helper(x):
 
 
 def run(cmd):
-    return cmd.strip()
+    import os
+    return os.system(cmd)          # BUG: command injection via os.system
