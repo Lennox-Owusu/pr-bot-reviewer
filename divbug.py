@@ -10,3 +10,4 @@ def add(x, y):
 # burst 4
 # merged-verify 1
 # merged-verify 2
+# merged-verify 3
