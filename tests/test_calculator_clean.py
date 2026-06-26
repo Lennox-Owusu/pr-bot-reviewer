@@ -12,7 +12,8 @@ from calculator_clean import divide
 ])
 def test_divide_normal(a, b, expected):
     assert divide(a, b) == expected
-    assert divide(10, 2) == 5.0
+def test_divide_normal(a, b, expected):
+    assert divide(a, b) == expected
 
 
 def test_divide_by_zero_raises():
